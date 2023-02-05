@@ -103,6 +103,12 @@ h6 {
   margin: 0;
 }
 
+#header .gapp {
+  margin-top: 10px;
+  margin-left: 80px;
+  display: flex;
+}
+
 #header .social-links {
   margin-top: 40px;
   display: flex;
