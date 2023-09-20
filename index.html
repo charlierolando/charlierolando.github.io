@@ -185,6 +185,7 @@
           </style>
           <script>
             function toggleMoreContent() {
+              ubahTeks();
               var moreContent = document.getElementById("more-content");
               if (moreContent.classList.contains("hidden-content")) {
                 moreContent.classList.remove("hidden-content");
@@ -194,10 +195,24 @@
                 moreContent.classList.add("hidden-content");
               }
             }
+
+            function ubahTeks() {
+            var button = document.getElementById("myButton");
+            
+            if (button.innerHTML === "See Less") {
+              button.innerHTML = "See More";
+              button.style.fontWeight = "bold";
+            } else {
+              button.innerHTML = "See Less";
+              button.style.fontWeight = "bold";
+            }
+          }
           </script>
-          <button class="see-more-button" onclick="toggleMoreContent()"><strong>See More</strong></button>
+          <button class="see-more-button" id="myButton" onclick="toggleMoreContent()"><strong>See More</strong></button>
           <div id="more-content" class="hidden-content">
-            <iframe src="https://www.linkedin.com/in/charlierolando/" width=100%></iframe>
+            <p></p>
+            <p></p>
+            <a href="https://www.linkedin.com/in/charlierolando/" target="_blank">Click this</a>
           </div>
         </div>
       </div>
@@ -854,7 +869,7 @@
     <!-- You can delete the links only if you purchased the pro version. -->
     <!-- Licensing information: https://bootstrapmade.com/license/ -->
     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    Designed by <!-- <a href="https://bootstrapmade.com/" target="_blank" > --> <a href="" >BootstrapMade</a> edit<a href="#about" >@Charlie</a>
+    Designed by <!-- <a href="https://bootstrapmade.com/" target="_blank" > --> <a href="" >BootstrapMade</a> edit<a href="https://charlierolando.github.io/index.html#about" >@Charlie</a>
   </div>
 
   <!-- Vendor JS Files -->
