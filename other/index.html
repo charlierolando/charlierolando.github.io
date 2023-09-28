@@ -30,6 +30,26 @@
   <link href="../assets/css/style.css" rel="stylesheet">
 
   <style>
+    h1_ {
+      font-family: "Raleway", sans-serif;
+    }
+
+    #header h1_ a,
+    #header h1_ a:hover {
+      color: #fff;
+      line-height: 1;
+      display: inline-block;
+    }
+
+    #header h1_ {
+      font-size: 36px;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-weight: 700;
+      font-family: "Poppins", sans-serif;
+    }
+    
     @media (min-width: 992px) {
       .top-right-div {
           flex: 1; /* Bagian kiri (elemen pertama) yang mengambil setengah dari lebar */
@@ -37,27 +57,57 @@
           top: 0; /* Bagian atas (atas) elemen */
           right: 0; /* Bagian kanan (right) elemen */
           padding: 10px; /* Ruang dalam */
-          transform: translate(-5%, -25%); /* Pusatkan elemen */
+          transform: translate(-40%, -24%); /* Pusatkan elemen */
       }
-    }
-    
-    .sidebar_ {
+      
+      .container__ {
         flex: 2; /* Sidebar yang mengambil lebih sedikit ruang */
         position: absolute; /* Posisi absolut */
         top: 0; /* Bagian atas (atas) elemen */
         left: 0; /* Bagian kanan (right) elemen */
         padding: 10px; /* Ruang dalam */
-        transform: translate(10%, 21%); /* Pusatkan elemen */
+        transform: translate(34%, 22%); /* Pusatkan elemen */
+      }
+      
+      .sidebar_ {
+        flex: 2; /* Sidebar yang mengambil lebih sedikit ruang */
+        position: absolute; /* Posisi absolut */
+        top: 0; /* Bagian atas (atas) elemen */
+        right: 0; /* Bagian kanan (right) elemen */
+        padding: 10px; /* Ruang dalam */
+        transform: translate(-268%, 16%); /* Pusatkan elemen */
+      }
     }
 
     @media (max-width: 992px) {
-        .sidebar_ {
-          flex: 2; /* Sidebar yang mengambil lebih sedikit ruang */
-          position: absolute; /* Posisi absolut */
-          top: 0; /* Bagian atas (atas) elemen */
-          left: 0; /* Bagian kanan (right) elemen */
-          padding: 10px; /* Ruang dalam */
-          transform: translate(0%, 0%); /* Pusatkan elemen */
+      #header h1_ {
+        font-size: 30px;
+      }
+
+      .container__ {          
+        flex: 2; /* Sidebar yang mengambil lebih sedikit ruang */
+        /* padding-top: 25px; */
+        /* margin-top: 10px;
+        margin-bottom: 25px;
+        display: flex; */
+        position: absolute; /* Posisi absolut */
+        top: 0; /* Bagian atas (atas) elemen */
+        left: 0; /* Bagian kanan (right) elemen */
+        padding: 0px; /* Ruang dalam */
+        transform: translate(7%, 49%); /* Pusatkan elemen */
+      }
+
+       .sidebar_ {          
+        flex: 2; /* Sidebar yang mengambil lebih sedikit ruang */
+        /* padding-top: 25px; */
+        /* margin-top: 10px;
+        margin-bottom: 25px;
+        display: flex; */
+        position: absolute; /* Posisi absolut */
+        top: 0; /* Bagian atas (atas) elemen */
+        right: 0; /* Bagian kanan (right) elemen */
+        padding: 0px; /* Ruang dalam */
+        transform: translate(-41%, 18%); /* Pusatkan elemen */
       }
     }
 
@@ -92,6 +142,11 @@
 
   <!-- ======= Header ======= -->
   <header id="header">
+    <div class="container__">
+
+      <h1_><a href="index.html">Charlie Rolando</a></h1_>
+    </div>
+    
     <div class="top-right-div">
 
       <nav id="navbar" class="navbar">
