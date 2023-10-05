@@ -231,23 +231,28 @@
               }
             }
 
+            let temp = 0;
             function ubahTeks() {
             var button = document.getElementById("myButton");
             
-            if (button.innerHTML === "See Less") {
+            if (temp === 1) {
+              temp = 0;
               button.innerHTML = "See More";
               button.style.fontWeight = "bold";
             } else {
+              temp = 1;
               button.innerHTML = "See Less";
               button.style.fontWeight = "bold";
             }
           }
           </script>
+          <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
           <button class="see-more-button" id="myButton" onclick="toggleMoreContent()"><strong>See More</strong></button>
           <div id="more-content" class="hidden-content">
             <p></p>
             <p></p>
-            <a href="https://www.linkedin.com/in/charlierolando/" target="_blank">Click this</a>
+            <!-- <a href="https://www.linkedin.com/in/charlierolando/" target="_blank">Click this</a> -->
+            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="charlierolando" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/charlierolando?trk=profile-badge"></a></div>
           </div>
         </div>
       </div>
