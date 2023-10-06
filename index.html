@@ -252,24 +252,19 @@
             <p></p>
             <p></p>
             <!-- <a href="https://www.linkedin.com/in/charlierolando/" target="_blank">Click this</a> -->
-            <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="charlierolando" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/charlierolando?trk=profile-badge"></a></div> -->
+            <div id="if-denied" style="display: none;">Content does not appear because cookies are blocked or disabled. <a href="https://www.linkedin.com/in/charlierolando/"  target="_blank">Click this</a></div>
+            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="charlierolando" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/charlierolando?trk=profile-badge"></a></div>
             <script>
-              // try catch
-              try {
-                // Membuat elemen div dengan innerHTML menggunakan template literal
-                var htmlString = `
-                  <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="charlierolando" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/charlierolando?trk=profile-badge"></a>
-                  </div>
-                `;
-
-                // Menambahkan elemen div ke dalam dokumen
-                document.body.innerHTML += htmlString;
-              } catch (error) {
-                document.write("Content does not appear because cookies are blocked or disabled. ");
-
-                // Tampilkan tautan
-                document.write('<a href="https://www.linkedin.com/in/charlierolando/">Click this</a>');
-              }
+              fetch('https://badges.linkedin.com/profile?locale=en_US&badgetype=HORIZONTAL&badgetheme=dark&uid=176036&version=v1&maxsize=large&trk=profile-badge&vanityname=charlierolando')
+              .catch(function(error) {
+                // Menangani kesalahan jika permintaan ditolak
+                
+                // Mengambil elemen <div> berdasarkan ID
+                var divElement = document.getElementById("if-denied");
+                
+                 // Sembunyikan elemen div
+                divElement.style.display = "block";
+              });
             </script>
           </div>
         </div>
