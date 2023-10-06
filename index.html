@@ -252,6 +252,24 @@
             <p></p>
             <p></p>
             <!-- <a href="https://www.linkedin.com/in/charlierolando/" target="_blank">Click this</a> -->
+            <script>
+              // Coba mengatur cookie
+              document.cookie = "testCookie=testValue";
+
+              // Membaca cookie
+              var cookieValue = document.cookie;
+
+              // Cek apakah cookie telah diatur dan dibaca dengan sukses
+              if (cookieValue.indexOf("testCookie=testValue") == -1) {
+                // Cookies diblokir atau dinonaktifkan
+                document.write("Content does not appear because cookies are blocked or disabled. ");
+              
+                // Tampilkan tautan
+                document.write('<a href="https://www.linkedin.com/in/charlierolando/">Click this</a>');
+                
+                document.write(" to see its contents.");
+              }
+            </script>
             <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="charlierolando" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/charlierolando?trk=profile-badge"></a></div>
           </div>
         </div>
