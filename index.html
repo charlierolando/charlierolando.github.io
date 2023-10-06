@@ -256,11 +256,8 @@
               // Coba mengatur cookie
               document.cookie = "testCookie=testValue";
 
-              // Membaca cookie
-              var cookieValue = document.cookie;
-
               // Cek apakah cookie telah diatur dan dibaca dengan sukses
-              if (cookieValue.indexOf("testCookie=testValue") === -1) {
+              if (navigator.cookieEnabled) {
                 // Cookies diblokir atau dinonaktifkan
                 document.write("Content does not appear because cookies are blocked or disabled. ");
               
