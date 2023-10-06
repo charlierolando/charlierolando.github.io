@@ -268,7 +268,35 @@
                 }
                 if((divElement.offsetWidth === 0 && divElement.offsetHeight === 0) || (divElement.offsetParent === null)){
                   // Elemen div ada dalam DOM tetapi tidak terlihat oleh pengguna
+                  document.write("if 2");
                   document.write("Elemen div ada tetapi tidak terlihat.");
+                }
+                else {
+                  // Elemen div tidak ditemukan dalam DOM
+                  document.write("else 2");
+                  document.write("Elemen div tidak ditemukan.");
+                }
+                
+                if(divElement.offsetParent === null){
+                  // Elemen div ada dalam DOM tetapi tidak terlihat oleh pengguna
+                  document.write("if 3");
+                  document.write("Elemen div ada tetapi tidak terlihat.");
+                }
+                else {
+                  // Elemen div tidak ditemukan dalam DOM
+                  document.write("else 3");
+                  document.write("Elemen div tidak ditemukan.");
+                }
+                
+                if(divElement.offsetWidth === 0 && divElement.offsetHeight === 0){
+                  // Elemen div ada dalam DOM tetapi tidak terlihat oleh pengguna
+                  document.write("if 4");
+                  document.write("Elemen div ada tetapi tidak terlihat.");
+                }
+                else {
+                  // Elemen div tidak ditemukan dalam DOM
+                  document.write("else 4");
+                  document.write("Elemen div tidak ditemukan.");
                 }
               } else {
                 // Elemen div tidak ditemukan dalam DOM
