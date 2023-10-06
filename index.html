@@ -252,25 +252,29 @@
             <p></p>
             <p></p>
             <!-- <a href="https://www.linkedin.com/in/charlierolando/" target="_blank">Click this</a> -->
+            <div id="divvvv" class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="charlierolando" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/charlierolando?trk=profile-badge"></a></div>
             <script>
-              // Coba mengatur cookie
-              document.cookie = "testCookie=testValue";
+              // Mengambil referensi ke elemen div
+              var divElement = document.getElementById("divvvv");
 
-              // Cek apakah cookie telah diatur dan dibaca dengan sukses
-              if (navigator.cookieEnabled) {
-                // Cookies diblokir atau dinonaktifkan
-                document.write("Content does not appear because cookies are blocked or disabled. ");
-              
-                // Tampilkan tautan
-                document.write('<a href="https://www.linkedin.com/in/charlierolando/">Click this</a>');
-                
-                document.write(" to see its contents.");
-              }
-              else{
-                document.write("else");
+              if (divElement) {
+                // Elemen div ada dalam DOM
+                if (window.getComputedStyle(divElement).getPropertyValue("display") !== "none") {
+                  // Elemen div terlihat oleh pengguna
+                  document.write("Elemen div terlihat.");
+                } else {
+                  // Elemen div ada dalam DOM tetapi tidak terlihat oleh pengguna
+                  document.write("Elemen div ada tetapi tidak terlihat.");
+                }
+                if((divElement.offsetWidth === 0 && divElement.offsetHeight === 0) || (divElement.offsetParent === null)){
+                  // Elemen div ada dalam DOM tetapi tidak terlihat oleh pengguna
+                  document.write("Elemen div ada tetapi tidak terlihat.");
+                }
+              } else {
+                // Elemen div tidak ditemukan dalam DOM
+                document.write("Elemen div tidak ditemukan.");
               }
             </script>
-            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="charlierolando" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/charlierolando?trk=profile-badge"></a></div>
           </div>
         </div>
       </div>
