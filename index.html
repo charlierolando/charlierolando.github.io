@@ -48,8 +48,55 @@
       <h1><a href="https://charlierolando.github.io/">Charlie Rolando</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>I'm <span>Mechatronics Engineering</span></h2>
-      <h2>Final-Year Student</h2>
+
+      <!-- <h2>I'm <span>Mechatronics Engineering</span></h2>
+      <h2>Final-Year Student</h2> -->
+      
+      <div class="text-h2-berdampingan">
+        <h2 id="changingText"></h2>
+        <h2><span id="textSpan"></span></h2>
+      </div>
+
+      <style>
+        /* 2 text h2 berdampingan */
+        .text-h2-berdampingan {
+            display: flex;
+        }
+        
+        /* Margin antara dua teks */
+        .text-h2-berdampingan h2 {
+            margin-right: 10px; 
+        }
+                
+        /*//////////////////////////////////*/
+
+        /* Efek transisi untuk teks */
+        #textSpan {
+            transition: opacity 0.2s ease-in-out; /* Efek transisi opacity selama 0.2 detik */
+        }
+      </style>
+
+      <script>
+        var texts = ["Mechatronics Engineering", "Final-Year Student"];
+        var text_no_span = ["I'm", ""];
+        var count = 0;
+        var textSpan = document.getElementById("textSpan");
+
+        function changeText() {
+          textSpan.style.opacity = "0"; // Atur opacity menjadi 0 untuk efek fade out
+          setTimeout(function() {
+            textSpan.textContent = texts[count];
+            textSpan.style.opacity = "1"; // Atur opacity kembali menjadi 1 untuk efek fade in
+            
+            changingText.textContent = text_no_span[count]; // text yang ke span
+
+            count < texts.length - 1 ? count++ : count = 0;
+          }, 200); // Setelah 300ms, teks berubah dengan efek fade in
+        }
+
+        // Fungsi untuk mengubah teks setiap beberapa detik
+        setInterval(changeText, 2000); // Ganti teks setiap 2 detik
+      </script>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -261,7 +308,7 @@
 
             <p></p>
             <p></p>
-            <div><a href="#portfolio"  target="_blank">Click this</a>, to see portfolio.</div>
+            <div><a href="https://charlierolando.github.io/portfolio"  target="_blank">Click this</a>, to see portfolio.</div>
           </div>
         </div>
       </div>
@@ -788,7 +835,7 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-2021 filter-2022 filter-2023">
           <div class="portfolio-wrap">
-            <img src="https://media.licdn.com/dms/image/D562DAQHpQlrIpJJjqQ/profile-treasury-image-shrink_800_800/0/1695305505861?e=1701158400&v=beta&t=tmzbPi6iafv-1kTOEen4vpya5-JJDZfjUtNfloQnAy8" class="img-fluid" alt="">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaBSuu3pYYX3SgKr-7ujOX2sdptO7Qef3RYVpBI2sCrxiuEytzz9YnMGc9j7RIQjKnTmSnmeOlOzNydNIASMz5v2N5waQQ" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Humanoid Dancing Robot</h4>
               <p>Jan 2021 - Aug 2023</p>
@@ -801,7 +848,7 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-2023">
           <div class="portfolio-wrap">
-            <img src="https://media.licdn.com/dms/image/D562DAQEXMiCkuVI95A/profile-treasury-image-shrink_800_800/0/1695292795851?e=1701162000&v=beta&t=8fhhUbxZ9_0IyQUQv7GpgWYZEA9TAg1e81VI4_SCOvY" class="img-fluid" alt="">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaD4pMI0fP0yew0TDXLdUSOgcs1147AQubbxzK1kA3mPSQ4U8ENUwYjio2wgoLxCeJTe16f5JMBI7r1CbJ2Yk_N1J2qeBA" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Printed Circuit Board Soldering Defect Identification</h4>
               <p>May 2023 - Sep 2023</p>
@@ -814,12 +861,26 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-2023">
           <div class="portfolio-wrap">
-            <img src="https://img.freepik.com/free-vector/404-error-with-landscape-concept-illustration_114360-7898.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1700524800&semt=ais" class="img-fluid" alt="">
+            <!-- <img src="https://img.freepik.com/free-vector/404-error-with-landscape-concept-illustration_114360-7898.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1700524800&semt=ais" class="img-fluid" alt=""> -->
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaB0-n2ER4mKdj2JgiL7cteqfx7QqWAo5wExDaFOlPSHu8W7HYBadeRzs5nrcHezrg0lcQ7GdydzOG-0OxvRAHJ6A32FXQ" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Humanoid Soccer Robot</h4>
               <p>Aug 2023 - Present</p>
               <div class="portfolio-links">
                 <a href="portfolio/3.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-2023">
+          <div class="portfolio-wrap">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaBfAFzAT0Zufk-tCpGjd7n-PmRweQ64C4Ed8i5w9bIzLfhEFqlmV-YfpkKAskM-AV6aFFyVW4WGcfcqh7rhgJbcz5kPWg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>SCARA Robot with Five-bar Linkage Mechanism using PLC</h4>
+              <p>Nov 2023 - Present</p>
+              <div class="portfolio-links">
+                <a href="portfolio/5.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a>
               </div>
             </div>
           </div>
