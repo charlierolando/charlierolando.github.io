@@ -61,6 +61,17 @@
     if (section) {
       e.preventDefault()
 
+      // pop-up portfolio
+      let portfolio_ = select('#portfolio')
+
+      if(section == portfolio_){
+        overlay.style.display = 'block';
+      }
+      else {
+        overlay.style.display = 'none';
+      }
+      // pop-up portfolio
+
       let navbar = select('#navbar')
       let header = select('#header')
       let sections = select('section', true)
@@ -122,6 +133,13 @@
 
         navlinks.forEach((item) => {
           if (item.getAttribute('href') == window.location.hash) {
+          
+            // pop-up portfolio
+            if (item.getAttribute('href') == '#portfolio') {
+              overlay.style.display = 'block';
+            }
+            // pop-up portfolio
+            
             item.classList.add('active')
           } else {
             item.classList.remove('active')
