@@ -66,9 +66,11 @@
 
       if(section == portfolio_){
         overlay.style.display = 'block';
+        popup.style.display = 'block';
       }
       else {
         overlay.style.display = 'none';
+        popup.style.display = 'none';
       }
       // pop-up portfolio
 
