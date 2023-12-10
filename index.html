@@ -845,7 +845,7 @@
     <style>
       /* Style untuk pop-up */
       .overlay {
-        display: block;
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -910,26 +910,6 @@
 
     <!-- Script JavaScript -->
     <script>
-      var popupClosed = false; // variabel kalo popup udh pernah di closed
-
-      // Fungsi untuk menampilkan pop-up saat scroll ke section tertentu
-      window.addEventListener('scroll', function() {
-        var overlay = document.getElementById('overlay');
-        var popup = document.getElementById('popup');
-        var section = document.getElementById('portfolio'); // Ganti dengan ID section yang diinginkan
-
-        var sectionRect = section.getBoundingClientRect();
-        var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-      
-        if (sectionRect.top < windowHeight / 2 && !popupClosed) {
-          overlay.style.display = 'block';
-          popup.style.display = 'block';
-        } else {
-          overlay.style.display = 'none';
-          popup.style.display = 'none';
-        }
-      });
-
       // Fungsi untuk menutup pop-up
       function closePopup() {
         document.getElementById("overlay").style.display = "none";
@@ -937,7 +917,6 @@
 
         overlay.style.display = "none";
         popup.style.display = "none";
-        popupClosed = true;
       }
     </script>
     <!-- Pop-up -->
