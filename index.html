@@ -8,8 +8,9 @@
   <title>Charlie Rolando's Personal Website</title>
   <meta property="og:title" content="Charlie Rolando's Personal Website">
   <meta property="og:image" content="https://raw.githubusercontent.com/charlierolando/charlierolando.github.io/main/other/images1.png">
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta property="og:image:alt" content="Charlie Rolando's Personal Website">
+  <meta content="Charlie Rolando's Personal Website" name="description">
+  <meta content="Charlie Rolando's Personal Website" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/icon1.png" rel="icon">
@@ -77,8 +78,8 @@
       </style>
 
       <script>
-        var texts = ["Mechatronics Engineering", "Final-Year Student"];
-        var text_no_span = ["I'm", ""];
+        var texts = ["Final-Year Student", "Mechatronics Engineering"];
+        var text_no_span = ["", "I'm"];
         var count = 0;
         var textSpan = document.getElementById("textSpan");
 
@@ -159,7 +160,7 @@
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/me.jpg" class="img-fluid" alt="">
+          <img src="assets/img/me.jpg" class="img-fluid" alt="Charlie Rolando" title="Charlie Rolando">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <!-- <h3>UI/UX &amp; Graphic Designer</h3> -->
@@ -177,12 +178,20 @@
               <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li> -->
             </ul>
           </div>
+
+          <p class="fst-italic">
+            A final-year student at Politeknik Negeri Batam, with expertise in mechanics, electronics, and especially in programming, passionate about robotics and automation. Have experience in research and development projects at Barelang Robotics and Artificial Intelligence Lab (BRAIL) for 2 years 11 months and participated in several national student (DIKTI) robotics competitions. Looking for experience in control systems, manufacturing and other robotics and automation fields.
+          </p>
+
+          <!-- 
           <p class="fst-italic">
             I am a final-year Mechatronics Engineering student who has knowledge in mechanics, electronics, and programming to create innovative solutions. With my strong educational background, especially in programming, I have a deep understanding of the basic principles required to design and develop complex mechatronics systems.
           </p>
           <p class="fst-italic">
             During my studies, I was actively involved in research and development projects at Barelang Robotics and Artificial Intelligence Lab (BRAIL), which gave me practical experience in designing, prototyping, and programming mechatronics systems, especially for embedded systems and humanoid robots. I also had the honor to participate in student competitions (DIKTI) at the national level several times. Additionally, I have good interpersonal skills and can work in a team to complete projects efficiently. I have a strong interest in robotics and automation, and I am passionate about developing solutions that can help increase efficiency and productivity across a variety of industries. With a combination of technical knowledge, communication skills and a passion for continuous learning, I am ready to face challenges in the world of mechatronics engineering and contribute to the development of future technologies.
           </p>
+           -->
+          
           <div class="row">
             <div class="col-lg-6">
               <ul>
@@ -197,8 +206,28 @@
               </ul>
             </div>
           </div>
+          
+          <p class="jan_21_des23"><strong>
+            • Jan 2021 - Des 2023</strong>
+          </p>
+          <p class="custom-padding-to-right">
+            Research and Development (Programming) at the Barelang Robotics and Artificial Intelligence Lab (BRAIL)...<button class="see-more-button" id="myButton" onclick="toggleMoreContent()"><strong>See More</strong></button>
+          </p>
+
           <style>
-            
+            .jan_21_des23 {
+              color: #16c816;
+              margin-bottom: 3px; /* Menambahkan jarak di bagian bawah paragraf dengan kelas 'spaced-paragraph' */
+            }
+
+            .spaced-paragraph {
+              margin-bottom: 3px; /* Menambahkan jarak di bagian bawah paragraf dengan kelas 'spaced-paragraph' */
+            }
+
+            .custom-padding-to-right {
+              padding-left: 9px; /* Menambahkan padding di sebelah kiri teks paragraf */
+            }
+
             @media (min-width: 992px) {
               .gap0 {
                 padding: 15px 60px;
@@ -234,9 +263,9 @@
 
             /* Tombol dasar */
             .see-more-button {
-              padding: 5px 10px;
-              background-color: #16c816;
-              color: black;
+              padding: 0px 0px;
+              background-color: transparent;
+              color: white;
               border: none;
               cursor: pointer;
               border-radius: 5px;
@@ -246,7 +275,8 @@
           
             /* Efek hover */
             .see-more-button:hover {
-              background-color: #00ff00;
+              background-color: black;
+              color: #16c816;
             }
           
             /* Konten yang disembunyikan */
@@ -298,17 +328,16 @@
           }
           </script>
           <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-          <button class="see-more-button" id="myButton" onclick="toggleMoreContent()"><strong>See More</strong></button>
           <div id="more-content" class="hidden-content">
             <p></p>
             <p></p>
             <!-- <a href="https://www.linkedin.com/in/charlierolando/" target="_blank">Click this</a> -->
             <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="charlierolando" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/charlierolando?trk=profile-badge"></a></div>
-            <div id="if-denied"><a href="https://www.linkedin.com/in/charlierolando/"  target="_blank">Click this</a>, if experience content does not appear.</div>
+            <div id="if-denied"><a class="custom-padding-to-right" href="https://www.linkedin.com/in/charlierolando/"  target="_blank">Click this</a>, if experience content does not appear.</div>
 
             <p></p>
             <p></p>
-            <div><a href="https://charlierolando.github.io/portfolio"  target="_blank">Click this</a>, to see portfolio.</div>
+            <div><a class="custom-padding-to-right" href="https://charlierolando.github.io/portfolio"  target="_blank">Click this</a>, to see portfolio.</div>
           </div>
         </div>
       </div>
@@ -632,7 +661,7 @@
           </div>
         </div> -->
 
-        <div class="col-md-6 d-flex align-items-stretch">
+        <div class="col-md-12 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-share-alt"></i>
             <h3>Social Profiles</h3>
@@ -645,20 +674,25 @@
               <!-- <a href="#" class="google-plus"><i class="bi bi-skype"></i></a> -->
               <a href="https://www.linkedin.com/in/charlierolando/" target="_blank" class="linkedin"><i
                   class="bi bi-linkedin"></i></a>
+              <a href="https://simt.kemdikbud.go.id/resume?id=4212001042&name=charlie-rolando-andrian-tamba" target="_blank" class="simt"><i
+                  class="bi"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="-50 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="currentColor" d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg></i></a>
+                
             </div>
           </div>
         </div>
 
+        <!-- 
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="info-box">
-            <i class="bx"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="-50 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="currentColor" d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg></i>
-            <h3>Sistem Informasi Manajemen talenta (SIMT)</h3>
+            <i class="bx"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="-50 0 576 512"> --><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="currentColor" d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg></i>
+            <!-- <h3>Sistem Informasi Manajemen talenta (SIMT)</h3>
             <div class="social-links">
               <a href="https://simt.kemdikbud.go.id/resume?id=4212001042&name=charlie-rolando-andrian-tamba" target="_blank" class="simt"><i
-                  class="bi"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="-50 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="currentColor" d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg></i></a>
-            </div>
+                  class="bi"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="-50 0 576 512"> --><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="currentColor" d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg></i></a>
+            <!-- </div>
           </div>
         </div>
+         -->
 
         <!-- <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
@@ -807,6 +841,18 @@
             <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
           </div>
         </div>
+        
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="https://lh3.googleusercontent.com/a/ACg8ocKnK7MXYh1iG9kG4TXuVxyU9vuLKG-FSGmN-mfOdIeqMWhp" class="img-fluid" alt="Charlie Rolando" title="Charlie Rolando">
+        </div>
+        
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="assets/img/me.jpg" class="img-fluid" alt="Charlie Rolando Andrian Tamba" title="Charlie Rolando Andrian Tamba">
+        </div>
+        
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="https://lh3.googleusercontent.com/a/ACg8ocKnK7MXYh1iG9kG4TXuVxyU9vuLKG-FSGmN-mfOdIeqMWhp" class="img-fluid" alt="Charlie Rolando Andrian Tamba" title="Charlie Rolando Andrian Tamba">
+        </div>
 
         <!-- 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
@@ -855,7 +901,7 @@
         z-index: 2;
       }
       .popup {
-        display: block;
+        display: none;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -922,11 +968,6 @@
     <!-- Pop-up -->
     <div class="container">
 
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>Projects</p>
-      </div>
-
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
@@ -938,6 +979,11 @@
         </div>
       </div>
 
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>Projects</p>
+      </div>
+      
       <div class="row portfolio-container">
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-2021 filter-2022 filter-2023">
