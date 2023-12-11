@@ -139,6 +139,7 @@
             // pop-up portfolio
             if (item.getAttribute('href') == '#portfolio') {
               overlay.style.display = 'block';
+              popup.style.display = 'block';
             }
             // pop-up portfolio
             
