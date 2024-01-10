@@ -58,7 +58,84 @@
         <h2><span id="textSpan">Mechatronics Engineering</span></h2>
       </div>
 
+      <!-- text popup2 sebelah menu - mobile -->
+      <div id="popup2" class="popup2">
+        <div class="arrow-up"></div>
+        Click this to see the menu
+      </div>
+
       <style>
+        /* text popup2 sebelah menu - mobile */
+        @media (max-width: 992px) {
+          .popup2 {
+            top: -9999px;
+            right: -9999px;
+
+            display: none;
+            position: fixed;
+            color: #68ef07;
+            background-color: transparent;
+            z-index: 999;
+            opacity: 1; /* Awalnya opacity penuh */
+            transition: opacity 0.5s ease-in-out; /* Transisi untuk opacity */
+
+            position: fixed;
+            background-color: #000000;
+            border: none;
+            padding: 5px;
+            z-index: 3;
+            border-radius: 10px; /* Fillet kotak */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            font-size: 17px; /* Ubah ukuran teks */
+          }
+        }
+
+        @media (max-width: 992px) {
+          .popup2 {
+            top: 0%;
+            right: 0%;
+            transform: translate(-2%, 175%);
+            
+            display: none;
+            position: fixed;
+            color: #68ef07;
+            background-color: transparent;
+            z-index: 999;
+            opacity: 1; /* Awalnya opacity penuh */
+            transition: opacity 0.5s ease-in-out; /* Transisi untuk opacity */
+
+            position: fixed;
+            background-color: #000000;
+            border: none;
+            padding: 5px;
+            z-index: 3;
+            border-radius: 10px; /* Fillet kotak */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            font-size: 17px; /* Ubah ukuran teks */
+          }
+        }
+
+        .popup2.fade-out {
+          opacity: 0; /* Mengurangi opacity saat popup2 akan hilang */
+        }
+
+        .arrow-up {
+          /* transform: rotate(90deg); */ /* Rotate the item by 45 degrees */
+          position: absolute;
+          top: -16px;
+          right: 15px;
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid #68ef07;
+          
+          display: flex;
+          justify-content: center; /* Rata tengah secara horizontal */
+          align-items: center; /* Rata tengah secara vertikal */
+        }
+        /* text popup2 sebelah menu - mobile */
+
         /* 2 text h2 berdampingan */
         .text-h2-berdampingan {
             display: flex;
@@ -77,7 +154,29 @@
         }
       </style>
 
-      <script>
+      <script>        
+        /* text popup2 sebelah menu - mobile */
+        // JavaScript untuk menampilkan popup2 otomatis
+        document.addEventListener("DOMContentLoaded", function() {
+          var popup2 = document.getElementById("popup2");
+          var arrow = document.querySelector(".arrow-up");
+      
+          popup2.style.display = "block";
+      
+          setTimeout(hidepopup2, 5000); // Hide popup2 after 5 seconds
+        });
+      
+        function hidepopup2() {
+          var popup2 = document.getElementById("popup2");
+          popup2.classList.add("fade-out"); // Menambahkan kelas untuk efek redup
+      
+          // Set timeout untuk benar-benar menyembunyikan popup2 setelah animasi selesai
+          setTimeout(function() {
+            popup2.style.display = "none";
+          }, 500);
+        }
+        /* text popup2 sebelah menu - mobile */
+
         var texts = ["Final-Year Student", "Mechatronics Engineering"];
         var text_no_span = ["", "I'm"];
         var count = 0;
@@ -180,7 +279,7 @@
           </div>
 
           <p class="fst-italic">
-            A final-year student at Politeknik Negeri Batam, with expertise in mechanics, electronics, and especially in programming, passionate about robotics and automation. Have experience in research and development projects at Barelang Robotics and Artificial Intelligence Lab (BRAIL) for 2 years 11 months and participated in several national student (DIKTI) robotics competitions. Looking for experience in control systems, manufacturing and other robotics and automation fields.
+            A final-year student at Politeknik Negeri Batam, with expertise in mechanics, electronics, and especially in programming, passionate about robotics and automation. Have experience in research and development projects at Barelang Robotics and Artificial Intelligence Lab (BRAIL) for 3 years and participated in several national student (DIKTI) robotics competitions. Looking for experience in control systems, manufacturing and other robotics and automation fields.
           </p>
 
           <!-- 
@@ -842,14 +941,18 @@
           </div>
         </div>
         
+        <!--
         <div class="col-lg-4" data-aos="fade-right">
           <img src="https://lh3.googleusercontent.com/a/ACg8ocKnK7MXYh1iG9kG4TXuVxyU9vuLKG-FSGmN-mfOdIeqMWhp" class="img-fluid" alt="Charlie Rolando" title="Charlie Rolando">
         </div>
-        
+        -->
+
+        <!--
         <div class="col-lg-4" data-aos="fade-right">
           <img src="assets/img/me.jpg" class="img-fluid" alt="Charlie Rolando Andrian Tamba" title="Charlie Rolando Andrian Tamba">
         </div>
-        
+        -->
+
         <div class="col-lg-4" data-aos="fade-right">
           <img src="https://lh3.googleusercontent.com/a/ACg8ocKnK7MXYh1iG9kG4TXuVxyU9vuLKG-FSGmN-mfOdIeqMWhp" class="img-fluid" alt="Charlie Rolando Andrian Tamba" title="Charlie Rolando Andrian Tamba">
         </div>
@@ -1070,7 +1173,7 @@
             <div class="portfolio-info">
               <h4>Research and Development (Programming)</h4>
               <h4>Barelang Robotics and Artificial Intelligence Lab (BRAIL)</h4>
-              <p>Jan 2021 - Present (3 Years)</p>
+              <p>Jan 2021 - Des 2023 (3 Years)</p>
               <div class="portfolio-links">
                 <a href="portfolio/4.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a>
               </div>
