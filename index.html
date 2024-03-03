@@ -65,28 +65,30 @@
       </div>
 
       <style>
+        .popup2 {            
+          display: none;
+          position: fixed;
+          color: #68ef07;
+          background-color: transparent;
+          z-index: 999;
+          opacity: 1; /* Awalnya opacity penuh */
+          transition: opacity 0.5s ease-in-out; /* Transisi untuk opacity */
+
+          position: fixed;
+          background-color: #000000;
+          border: none;
+          padding: 5px;
+          z-index: 3;
+          border-radius: 10px; /* Fillet kotak */
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+          font-size: 17px; /* Ubah ukuran teks */
+        }
+        
         /* text popup2 sebelah menu - mobile */
-        @media (max-width: 992px) {
+        @media (min-width: 992px) {
           .popup2 {
             top: -9999px;
             right: -9999px;
-
-            display: none;
-            position: fixed;
-            color: #68ef07;
-            background-color: transparent;
-            z-index: 999;
-            opacity: 1; /* Awalnya opacity penuh */
-            transition: opacity 0.5s ease-in-out; /* Transisi untuk opacity */
-
-            position: fixed;
-            background-color: #000000;
-            border: none;
-            padding: 5px;
-            z-index: 3;
-            border-radius: 10px; /* Fillet kotak */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-            font-size: 17px; /* Ubah ukuran teks */
           }
         }
 
@@ -95,23 +97,6 @@
             top: 0%;
             right: 0%;
             transform: translate(-2%, 175%);
-            
-            display: none;
-            position: fixed;
-            color: #68ef07;
-            background-color: transparent;
-            z-index: 999;
-            opacity: 1; /* Awalnya opacity penuh */
-            transition: opacity 0.5s ease-in-out; /* Transisi untuk opacity */
-
-            position: fixed;
-            background-color: #000000;
-            border: none;
-            padding: 5px;
-            z-index: 3;
-            border-radius: 10px; /* Fillet kotak */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-            font-size: 17px; /* Ubah ukuran teks */
           }
         }
 
