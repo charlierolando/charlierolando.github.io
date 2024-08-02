@@ -1034,6 +1034,8 @@ section .container {
 }
 
 .portfolio .portfolio-wrap {
+  height: 45vh;
+  width: auto;
   transition: 0.3s;
   position: relative;
   overflow: hidden;
